@@ -1,11 +1,15 @@
-Legend
+# Legend
 
     MA - Movies Application
     CD - Core Data
 
-Application Requirements
+# Application Requirements
 
-    The application's purpose is to show movies in grid fetched from server or database. The grid is implemented using MACollectionView which inherits from UICollectionView and implement it's methods. Xib file is provided for cell implementation which includes imageview for the movie's poster. There are 2 methods for using the collection view - setMoviesResult and setFavouriteMovies as well as a delegate which is called whenever next page is required or an item has been selected.
+    The application's purpose is to show movies in grid fetched from server or database. The grid is
+    implemented using MACollectionView which inherits from UICollectionView and implement it's methods.
+    Xib file is provided for cell implementation which includes imageview for the movie's poster.
+    There are 2 methods for using the collection view - setMoviesResult and setFavouriteMovies as well
+    as a delegate which is called whenever next page is required or an item has been selected.
 
     Filter requirements of the task are implemented as a tab bar controller with 3 tabs - popular, top rated and favourites. The first 2 load the information from the 3rd party API, the favourites tab uses movies stored in local database implemented with CoreData.
     
@@ -15,13 +19,13 @@ Application Requirements
 
     Back navigation for the user is provided with use of UINavigationController. MATabBarController sets the back navigation title to always be "Back".
 
-Code implementation
+# Code implementation
 
-Base Classes
+## Base Classes
 
     - inherit from UIKit classes or used as a parent class. They implement all the base features for the specifed file type - controller/class/struct etc. For example MABaseViewController adds all controllers which inhert it to the delegates array in MACommunicationManager.
 
-Managers - used as singleton, implementing their own queues.
+## Managers - used as singleton, implementing their own queues.
 
     MAApplicationManager - methods for base application functions, for example preparing the app at start or showing the activity indicator.
     
@@ -33,27 +37,27 @@ Managers - used as singleton, implementing their own queues.
     
     MAFileManager - saves/loads downloaded movie posters to/from a local directory.
     
-Core Data
+## Core Data
     
     Implements 2 models - CDMovie and CDGenre. CDGenre is a connecting table between movies and genres using their ids.
     
-Requests
+## Requests
     
     MABaseURLRequest - implements the logic of all requests executed to the server. It requires which child request to override certain variables - successAction and failedAction. Those are the delegate methods that should be called when requests succeeds or fails. OnSuccessData is optional because some requests might not have data in their server response.
     
-Extensions 
+## Extensions 
 
     Extensions of UIKit classes or custom classes and implementing a common and helpful logic.
     
-Labels
+## Labels
 
     MALabel - implements convenient to customize the current label
     
-Localization
+## Localization
 
     MAStrings - struct that holds constants which call Localizable.strings with an appropriate key and ask for the correspondent translation. When using constants instead of keys in the code implementation, the chance of mistake is significantly smaller.
     
-Constants
+## Constants
 
     The file MAConstants contains constants used in the application. Constants are subdivied in different structures for a better code implementation.
     
