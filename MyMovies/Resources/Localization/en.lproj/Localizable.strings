@@ -1,0 +1,19 @@
+"TITLE_THE_MOVIE_DB" = "The Movie Db";
+
+"TAB_BAR_TITLE_POPULAR" = "Popular";
+"TAB_BAR_TITLE_TOP_RATED" = "Top Rated";
+
+"BUTTON_OK" = "Ok";
+"BUTTON_CANCEL" = "Cancel";
+
+"TEXT_BACK" = "Back";
+"TEXT_ORIGINAL_TITLE" = "Original title";
+"TEXT_RATING" = "Rating";
+"TEXT_OVERVIEW" = "Overview";
+
+"TEXT_FORMAT_RELEASE_DATE" = "Release date %@";
+
+"MESSAGE_FORMAT_ADDED_TO_FAVOURITES" = "%@ added to favourites";
+"MESSAGE_FORMAT_REMOVED_FROM_FAVOURITES" = "%@ removed from favourites";
+
+"ERROR_MESSAGE_STANDARD" = "Please accept our apologies, the service is temporarily unavailable. Please try again later.";
