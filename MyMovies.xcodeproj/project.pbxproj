@@ -124,11 +124,11 @@
 		8C26DC062073AADF007BDE6A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				8C26DC072073AAF6007BDE6A /* MACommunicationManager.swift */,
 				8C26F4C62074BE02003C3933 /* MAAplicationManager.swift */,
+				8CE5B24B20751FE800FDAAD3 /* MADatabaseManager.swift */,
+				8C26DC072073AAF6007BDE6A /* MACommunicationManager.swift */,
 				8CE5B24520750A9300FDAAD3 /* MAAsyncManager.swift */,
 				8CE5B2492075136C00FDAAD3 /* MAFileManager.swift */,
-				8CE5B24B20751FE800FDAAD3 /* MADatabaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -180,8 +180,8 @@
 				8CE5B23A2074E5D400FDAAD3 /* Dictionary+Helpers.swift */,
 				8C56AB12207693E900425501 /* UIColor+Helpers.swift */,
 				8C56AB1420774BF200425501 /* UIAlertController+Helpers.swift */,
-				8C26DC1B2074AD38007BDE6A /* MAMovie+Helpers.swift */,
 				8C3707972077728C008E13A4 /* Locale+Helpers.swift */,
+				8C26DC1B2074AD38007BDE6A /* MAMovie+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

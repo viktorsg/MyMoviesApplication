@@ -11,14 +11,19 @@ import UIKit
 class MAPopularMoviesViewController: MAMoviesViewController {
     
     
-    // MARK: Abstract Methods
+    // MARK: Controller Methods
     
-    override func customInit() {
-        super.customInit()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        self.moviesCollectionView.addLoadingIndicator(withStyle: .whiteLarge)
-        self.getPopularMovies()
+        if self.getMovies {
+            self.getMovies = false
+            self.getPopularMovies()
+        }
     }
+    
+    
+    // MARK: Abstract Methods
     
     override func localize() {
         super.localize()
@@ -30,6 +35,10 @@ class MAPopularMoviesViewController: MAMoviesViewController {
     // MARK: Private Methods
     
     private func getPopularMovies(page: Int = 1) {
+        if page == 1 {
+            self.moviesCollectionView.addLoadingIndicator(withStyle: .whiteLarge)
+        }
+        
         MACommunicationManager.getPopularMovies(page: page)
     }
 

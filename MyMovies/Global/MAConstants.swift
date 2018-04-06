@@ -18,7 +18,7 @@ struct MARequestLinks {
 struct MAConfig {
     
     static let host   = "http://api.themoviedb.org/3"
-    static let apiKey = ""
+    static let apiKey = "696a563d89fd73a4b5abbe1026075581"
     
     struct EndPoints {
         static let imageDownload = "https://image.tmdb.org/t/p/w185_and_h278_bestv2/"

@@ -9,16 +9,21 @@
 import UIKit
 
 class MATopRatedMoviesViewController: MAMoviesViewController {
+    
+    
+    // MARK: Controller Methods
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if self.getMovies {
+            self.getMovies = false
+            self.getTopRatedMovies()
+        }
+    }
 
     
     // MARK: Abstract Methods
-    
-    override func customInit() {
-        super.customInit()
-        
-        self.moviesCollectionView.addLoadingIndicator(withStyle: .whiteLarge)
-        self.getTopRatedMovies()
-    }
     
     override func localize() {
         super.localize()
@@ -30,6 +35,10 @@ class MATopRatedMoviesViewController: MAMoviesViewController {
     // MARK: Private Methods
     
     private func getTopRatedMovies(page: Int = 1) {
+        if page == 1 {
+            self.moviesCollectionView.addLoadingIndicator(withStyle: .whiteLarge)
+        }
+        
         MACommunicationManager.getTopRatedMovies(page: page)
     }
 

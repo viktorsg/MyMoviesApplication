@@ -18,6 +18,8 @@ class MAMoviesViewController: MABaseViewController {
     
     // MARK: Variables
     
+    var getMovies = true
+    
     private var _selectedMovie: MAMovie?
     
     private var currentPage: Int = 1

@@ -13,9 +13,6 @@ class MABaseURLRequest: NSObject {
     
     // MARK: Variables
     
-    private var _hasTimedOut: Bool?
-    private var _timer: Timer?
-    
     internal var link : String
     internal var body : Data?
     internal var data : [String : Any]
@@ -29,7 +26,6 @@ class MABaseURLRequest: NSObject {
     override init() {
         link = ""
         data = [:]
-        _hasTimedOut = false
         
         super.init()
     }
@@ -38,8 +34,6 @@ class MABaseURLRequest: NSObject {
     // MARK: Public Methods
     
     func send() {
-        _hasTimedOut = false
-        
         MAAplicationManager.shared.networkActivityDidStart()
         self.sendRequest(self.link, data: self.data)
     }
